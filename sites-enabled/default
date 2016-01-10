@@ -1,18 +1,25 @@
 server {
+    server_name machinelearninghoods.dimroc.com;
+    location / {
+        proxy_pass http://web-mlh.MachineLearningHoods:4001;
+    }
+}
+
+server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
     server_name urbanevents.dimroc.com;
     location / {
         # Hardcoded to CityWeb port
-        proxy_pass http://cityweb:5000;
+        proxy_pass http://cityweb.cityservice:5000;
     }
 }
 
 server {
     server_name kibana.urbanevents.dimroc.com;
     location / {
-        proxy_pass http://kibana:5601;
+        proxy_pass http://kibana.cityservice:5601;
     }
 }
 
@@ -20,42 +27,42 @@ server {
     server_name nyc.urbanevents.dimroc.com;
     location / {
         # Hardcoded to NYC Recorder port
-        proxy_pass http://cityservice-nyc:8080;
+        proxy_pass http://cityservice-nyc.cityservice:8080;
     }
 }
 
 server {
     server_name miami.urbanevents.dimroc.com;
     location / {
-        proxy_pass http://cityservice-miami:8084;
+        proxy_pass http://cityservice-miami.cityservice:8084;
     }
 }
 
 server {
     server_name losangeles.urbanevents.dimroc.com;
     location / {
-        proxy_pass http://cityservice-losangeles:8083;
+        proxy_pass http://cityservice-losangeles.cityservice:8083;
     }
 }
 
 server {
     server_name london.urbanevents.dimroc.com;
     location / {
-        proxy_pass http://cityservice-london:8081;
+        proxy_pass http://cityservice-london.cityservice:8081;
     }
 }
 
 server {
     server_name paris.urbanevents.dimroc.com;
     location / {
-        proxy_pass http://cityservice-paris:8082;
+        proxy_pass http://cityservice-paris.cityservice:8082;
     }
 }
 
 server {
     server_name austin.urbanevents.dimroc.com;
     location / {
-        proxy_pass http://cityservice-austin:8085;
+        proxy_pass http://cityservice-austin.cityservice:8085;
     }
 }
 

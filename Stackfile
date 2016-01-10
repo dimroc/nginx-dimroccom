@@ -2,7 +2,7 @@
 # Similar to a docker-compose file.
 
 nginx:
-  image: 'tutum.co/dimroc/urbanevents-nginx:latest'
+  image: 'tutum.co/dimroc/nginx-dimroccom:latest'
   links:
     - cityweb.cityservice
     - kibana.cityservice
@@ -12,6 +12,6 @@ nginx:
     - cityservice-paris.cityservice
     - cityservice-london.cityservice
     - cityservice-miami.cityservice
-    - mlh-web.MachineLearningHoods
+    - web-mlh.MachineLearningHoods
   ports:
     - '80:80'
