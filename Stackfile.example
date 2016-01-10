@@ -1,0 +1,17 @@
+# A tutum stackfile for all the services.
+# Similar to a docker-compose file.
+
+nginx:
+  image: 'tutum.co/dimroc/urbanevents-nginx:latest'
+  links:
+    - cityweb.cityservice
+    - kibana.cityservice
+    - cityservice-nyc.cityservice
+    - cityservice-austin.cityservice
+    - cityservice-losangeles.cityservice
+    - cityservice-paris.cityservice
+    - cityservice-london.cityservice
+    - cityservice-miami.cityservice
+    - mlh-web.MachineLearningHoods
+  ports:
+    - '80:80'
