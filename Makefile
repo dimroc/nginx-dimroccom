@@ -1,5 +1,5 @@
 DOCKER = docker
-REPO = tutum.co/dimroc/nginx-dimroccom
+REPO = dimroc/nginx-dimroccom
 TAG = latest
 
 build:

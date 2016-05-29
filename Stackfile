@@ -2,7 +2,7 @@
 # Similar to a docker-compose file.
 
 nginx:
-  image: 'tutum.co/dimroc/nginx-dimroccom:latest'
+  image: 'dimroc/nginx-dimroccom:latest'
   links:
     - cityweb.cityservice
     - kibana.cityservice
